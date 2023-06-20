@@ -1,0 +1,628 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.nav {
+  width: 1000px;
+  height: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+  /* background-color: #d35d54; */
+
+  font-size: large;
+  font-style: italic;
+  font-weight: 400;
+}
+.logo {
+  width: 100px;
+}
+.link {
+  text-decoration: none;
+  color: white;
+}
+.link ::selection {
+  background-color: #34d0d0;
+}
+.navbar {
+  height: 100px;
+}
+.navbody {
+  border: 1px solid black;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(24 39 53);
+}
+.nav2 {
+  display: flex;
+  width: 400px;
+  justify-content: space-around;
+}
+
+.section1 {
+  width: 100%;
+  background-size: auto, auto, cover;
+  background-position: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../images/hero-image2.jpg"), url("../images//grid.jpg");
+  min-height: 69vh;
+  /* background-image: url("../images/hero-image2.jpg"), url("../images//grid.png"); */
+}
+.hr {
+  margin: auto;
+
+  height: 10px;
+
+  background-color: aqua;
+}
+
+.introtext {
+  position: absolute;
+  top: 52%;
+  text-align: center;
+  width: 100%;
+  min-height: 100px;
+  font-size: 24px;
+  color: #fff;
+  line-height: 28px;
+  margin-top: -175px;
+}
+.start {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: rgb(51, 204, 204);
+  padding: 8px 24px;
+  font-size: 18px;
+  line-height: 25px;
+
+  font-family: Roboto;
+}
+.section2 {
+  color: #fff;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  box-sizing: border-box;
+  height: 200px;
+  border: 1px solid black;
+  background-color: rgb(24 39 53);
+  display: flex;
+  flex-wrap: wrap;
+
+  align-content: center;
+}
+
+.section3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.boxes1 {
+  display: flex;
+  flex-direction: row;
+  width: 1100px;
+  justify-content: space-between;
+}
+.boxes2 {
+  position: relative;
+  margin-top: 1%;
+
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  column-gap: 10px;
+  row-gap: 20px;
+  width: 1100px;
+}
+.box1 {
+  background-color: #232835;
+  color: aliceblue;
+}
+.box2 {
+  background-color: #34d0d0;
+}
+.sector3 {
+  margin-top: 20px;
+
+  width: 355px;
+  height: 200px;
+}
+.sector4 {
+  /* margin-top: 5%; */
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  color: #fff;
+  text-align: flex-start;
+  padding-left: 1%;
+}
+.box4,
+.box7 {
+  width: 250px;
+}
+.box6 {
+  background-color: #232835;
+  color: aliceblue;
+}
+.box7 {
+  background-color: #34d0d0;
+}
+.box3 {
+  background-size: cover;
+  background-position: center;
+  animation-name: box3;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+@keyframes box3 {
+  0% {
+    background-image: url("https://ongrid.in/images/home/whyOngridConstructor.jpg");
+    background-size: cover;
+    animation-duration: 3s;
+  }
+  55% {
+    background-image: url("https://ongrid.in/images/home/whyOngridFactoryWorker.jpg");
+    background-size: cover;
+    animation-duration: 5s;
+  }
+  100% {
+    background-image: url("https://ongrid.in/images/home/whyOngridWaiter.jpg");
+    animation-duration: 2s;
+  }
+}
+.box4 {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  animation-name: box4;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+@keyframes box4 {
+  0% {
+    background-image: url("https://ongrid.in/images/home/housekeeping.jpg");
+    background-size: cover;
+    animation-duration: 3s;
+  }
+  55% {
+    background-image: url("https://ongrid.in/images/home/Armed-Vip-Security-Guards.png");
+    background-size: cover;
+    animation-duration: 5s;
+  }
+  100% {
+    background-image: url("https://ongrid.in/images/home/whyOngridArchitect.jpg");
+    animation-duration: 2s;
+  }
+}
+.box5 {
+  width: 350px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-size: cover;
+  background-position: center;
+  animation-name: box5;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+@keyframes box5 {
+  0% {
+    background-image: url("https://ongrid.in/images/home/whyOngridCashier.jpg");
+    background-size: cover;
+    animation-duration: 3s;
+  }
+  55% {
+    background-image: url("https://ongrid.in/images/home/whyOngridEngineer.jpg");
+    background-size: cover;
+    animation-duration: 5s;
+  }
+  100% {
+    background-image: url("https://ongrid.in/images/home/whyOngridTaxiDriver.jpg");
+    animation-duration: 2s;
+  }
+}
+.box6 {
+  /* width: 375px; */
+  /* height: 200px;
+  
+  /* grid-row-start: 1;
+  grid-row-end: 2; */
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+.box7 {
+  height: 250px;
+}
+.box8 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  width: 340px;
+  /* height: 280px; */
+  background-color: #34d0d0;
+}
+
+.box9 {
+  width: 125px;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-size: cover;
+  background-position: center;
+  animation-name: box9;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+@keyframes box9 {
+  0% {
+    background-image: url("https://ongrid.in/images/home/whyOngridTeacher.jpg");
+    background-size: cover;
+    animation-duration: 3s;
+  }
+  55% {
+    background-image: url("https://ongrid.in/images/home/whyOngridDeliveryMan.jpg");
+    background-size: cover;
+    animation-duration: 5s;
+  }
+  100% {
+    background-image: url("https://ongrid.in/images/home/housekeeping.png");
+    animation-duration: 2s;
+  }
+}
+.section3 {
+  height: auto;
+}
+.section4 {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section4box {
+  /* border: 1px solid black; */
+  height: 500px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  right: 20px;
+  justify-content: space-around;
+  width: 1100px;
+}
+.sectionheading {
+  font-family: robot;
+  font-weight: 100;
+  font-size: xx-large;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.sectionintro {
+  font-size: medium;
+  width: 970px;
+  margin-bottom: 30px;
+}
+
+#hr {
+  width: 30px;
+  height: 5px;
+  border-radius: 10%;
+  background-color: aquamarine;
+  position: absolute;
+  left: 50%;
+}
+.btn {
+  padding: 0px;
+  height: 300px;
+  width: 300px;
+  border: 0;
+}
+.section4head {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+.sec4box1,
+.sec4box2,
+.sec4box3 {
+  /* border: 1px solid black; */
+  /* height: 500px;
+  width: 500px; */
+  color: white;
+
+  border: 1px solid black;
+  height: 300px;
+  width: 360px;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: xx-large;
+
+  /* font-style: normal; */
+  font-family: math;
+  z-index: -1;
+}
+
+.sec4box1 {
+  /* width: 330px; */
+  height: 450px;
+  background-image: url("https://ongrid.in/images/home/offerings-onGrid.jpg");
+
+  background-size: cover;
+}
+.pop1 {
+  border: 1px solid black;
+  color: white;
+  position: absolute;
+  width: 1200px;
+  height: 500px;
+  z-index: 2;
+  background-image: url("https://ongrid.in/images/home/offerings-onGrid1.jpg");
+  background-size: cover;
+}
+.sec4box2 {
+  /* width: 350px; */
+  height: 450px;
+  background-image: url("https://ongrid.in/images/home/offerings-gridlines.jpg");
+  background-size: cover;
+}
+.sec4box3 {
+  /* width: 350px; */
+  height: 450px;
+  background-image: url("https://ongrid.in/images/home/offerings-eLockr.jpg");
+  background-size: cover;
+}
+.popupheader {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.demolink {
+  border-radius: 65px;
+  padding: 10px;
+  background: #34d0d0 0 0 no-repeat padding-box;
+  opacity: 1;
+  top: 20px;
+  border-radius: 95px;
+  height: fit-content;
+  /* right: 30px;
+  top: 20px;
+  position: absolute; */
+  text-decoration: none;
+}
+.closebtn {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.popuphr {
+  height: 5px;
+  background-color: #34d0d0;
+}
+.popbody {
+  display: flex;
+}
+
+.pop1body1 {
+  height: auto;
+  /* padding-left: 44px; */
+  margin-top: 15px;
+  text-align: justify;
+  width: fit-content;
+  font-size: large;
+}
+.pop1body2 {
+  height: auto;
+
+  margin-top: 15px;
+  text-align: justify;
+  width: fit-content;
+  font-size: large;
+}
+.pop2text {
+  font-size: x-large;
+
+  margin-top: 70px;
+}
+.pop2footer {
+  margin-bottom: 30px;
+  font-size: large;
+}
+.active {
+  color: #34d0d0;
+}
+.section5 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1100px;
+}
+.section5body {
+  width: 1000px;
+  height: 700px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.section5heading {
+  font-family: robot;
+  font-weight: 100;
+  font-size: xx-large;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.section5intro {
+  font-size: medium;
+  width: 970px;
+  margin-bottom: 30px;
+}
+#sec5hr {
+  width: 30px;
+  height: 5px;
+  border-radius: 10%;
+  background-color: aquamarine;
+  position: absolute;
+  left: 50%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.businessgrid {
+  border: 1px solid black;
+  position: relative;
+  width: 300px;
+  height: 250px;
+  text-align: center;
+  background-color: rgb(86, 75, 75);
+}
+.businessimage {
+  /* box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.5); */
+  /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); */
+  filter: brightness(0.5);
+  width: 300px;
+  height: 250px;
+  /* opacity: 0.2; */
+  /* z-index: -2; */
+}
+.popups {
+  top: 27%;
+  left: 15%;
+  z-index: 2;
+  width: 70%;
+  height: 800px;
+  border: #34d0d0;
+  border: 1px solid;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: slideIn 1s ease-in;
+  align-items: center;
+}
+
+@keyframes slideIn {
+  from {
+    visibility: collapse;
+    /* transform: translatez(-100%); */
+    animation-duration: 0.5s;
+    opacity: 0;
+  }
+  to {
+    /* transform: translatez(0); */
+    animation-duration: 1s;
+    opacity: 1;
+  }
+}
+.unqbtn {
+  right: 1%;
+  position: absolute;
+  width: 30px;
+  border-radius: 50%;
+
+  background-color: #34d0d0;
+  color: #fff;
+  font-size: x-large;
+  font-weight: 500;
+}
+.title {
+  position: absolute;
+  top: 50px;
+  color: #fff;
+  font-weight: 500;
+  font-size: large;
+  left: 10%;
+}
+
+.details {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  font-size: large;
+  width: 100%;
+  height: 40%;
+  background-color: rgba(0, 0, 0, 0.83);
+  color: white;
+  justify-content: flex-start;
+  align-content: space-between;
+}
+.detailspara {
+  text-align: start;
+  margin: 1%;
+  font-size: medium;
+}
+.uniquepopup {
+  display: flex;
+  background-color: rgba(80, 78, 78, 0.984);
+  color: white;
+  flex-direction: column;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  text-align: start;
+  width: 100%;
+  height: 60%;
+  justify-content: center;
+  font-size: large;
+}
+.footermain {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 300px;
+  background-color: #232835;
+  color: aliceblue;
+}
+.footer {
+  color: aliceblue;
+  display: flex;
+  height: 200px;
+  /* background-color: rgb(65, 70, 63); */
+  justify-content: space-around;
+  align-items: center;
+}
+.footer1 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  color: #fff;
+}
+.a {
+  /* height: 30px; */
+  background-color: rgb(136, 131, 131);
+}
+
+.footer2 {
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 400px) and (max-width: 950px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+  }
+
+  .navbar {
+    height: 400px;
+  }
+  .section2 {
+    width: auto;
+    height: fit-content;
+  }
+}
