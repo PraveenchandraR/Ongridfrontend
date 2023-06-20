@@ -13,6 +13,7 @@ import Contact from '../Components/Footer/Contact';
 import Career from '../Components/Footer/Career';
 import TermsAnd from '../Components/Footer/TermsAnd';
 import Faq from '../Components/FAQs';
+import Userdetails from '../Components/userdetails';
 
 
 
@@ -36,7 +37,8 @@ const Routing = () => {
          <Route path='/contact' element={<Contact  />} />
         
          <Route path='/career' element={<Career  />} />
-         <Route path='/tnc' element={<TermsAnd />} />
+        <Route path='/tnc' element={<TermsAnd />} />
+        <Route path='/userdetails' element={<Userdetails /> } />
         
         
       {/* <Route path='/#business/${id}'/> */}

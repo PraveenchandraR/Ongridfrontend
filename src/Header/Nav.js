@@ -140,7 +140,7 @@ const Header = () => {
               <ul>
                 <div class="dropdown">
                   <button class="dropbtn">
-                    <Link className="nav-link">{auth?.userFound?.name}</Link>
+                    <Link className="nav-link" to={'/'}>{auth?.user?.name}</Link>
                   </button>
                   <ul class="dropdown-content">
                     {/* <li><Link className="draplink" to={`/${auth?.userFound?.role === 1 ? 'admin' : 'user'}`}>handleLogout</Link></li> */}
@@ -160,6 +160,9 @@ const Header = () => {
                 {/* <NavLink className="nav-link" to="/login">
                   LogIn
                 </NavLink> */}
+              </li>
+              <li>
+                <Link className="nav-link" to={'/userdetails'}>userdetails</Link>
               </li>
             </ul>
           </div>
