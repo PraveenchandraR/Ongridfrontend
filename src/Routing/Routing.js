@@ -30,8 +30,8 @@ const Routing = () => {
      
         <Route path='/business' element={<Bussiness /> } />
         <Route path='/faq' element={ <Faq />} />
-      <Route path='/bookdemo' element={<BookDemo />} />
-        <Route path='/login' element={afterlogged ?<BookDemo /> :<Sign />} />
+      <Route path='/bookdemo' element={afterlogged ?<BookDemo /> :<Sign />} />
+        <Route path='/login' element={afterlogged ?<BookDemo />:<Sign />} />
         <Route path='/signup' element={ <Signup />} />
        
          <Route path='/about' element={<About />} />
