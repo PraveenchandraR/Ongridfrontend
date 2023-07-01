@@ -2,7 +2,7 @@ import React, { useState } from "react";
 // // import axios from "axios";
 import Nav from "../Header/Nav";
 import '../Style/sign.css';
-import { useNavigate } from "react-router-dom";
+
 
 
 
@@ -21,7 +21,7 @@ function Signup() {
   {
     let item = { name, phone, email, password }
 
-           await fetch("http://localhost:8080/signup",
+           await fetch("https://ongrid-backendnew.onrender.com/signup",
       {
                   method: "POST",
                   body: JSON.stringify(item),

@@ -19,7 +19,7 @@ const Sign = () => {
   async function login(){
     let item= {email,password}
 
-    fetch("http://localhost:8080/login",{
+    fetch("https://ongrid-backendnew.onrender.com/login",{
       method:"POST",
       body:JSON.stringify(item),
       headers:{
@@ -32,7 +32,7 @@ const Sign = () => {
     
       if(data.status === "ok"){
         alert("login successfully")
-        console.log(data);
+        
         window.localStorage.setItem("token", data.data)
         window.localStorage.setItem("loggedIn", true)
         navigate('/')

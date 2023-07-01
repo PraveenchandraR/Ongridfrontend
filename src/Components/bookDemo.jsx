@@ -19,7 +19,7 @@ const BookDemo =()=>
           {
             let demoform = { name, phone, email, organisation,known }
         
-           await fetch("http://localhost:8080/bookdemo", {
+           await fetch("https://ongrid-backendnew.onrender.com/bookdemo", {
                           method: "POST",
                           body: JSON.stringify(demoform),
                           headers: {
@@ -31,7 +31,7 @@ const BookDemo =()=>
                           .then(data => {
                             if (data.status === "ok")
                             {
-                          console.log(data)
+                          
                               alert("Demo Booked successfully");
                               window.localStorage.setItem("demobooked", true);
                               navigate('/')

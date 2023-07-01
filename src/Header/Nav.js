@@ -43,7 +43,7 @@ const Header = () => {
   const [details, setDetails] = useState([]);
   const [profile, SetProfile] = useState(false);
     const fetchfunc = () => {
-        fetch("http://localhost:8080/userdetails", {
+        fetch("https://ongrid-backendnew.onrender.com/userdetails", {
     method: "POST",
     body:  JSON.stringify({ token: window.localStorage.getItem("token") }),
         
