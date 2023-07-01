@@ -15,11 +15,11 @@ const Nav = useNavigate();
   }
   return (
      <div>
-            <h1 className=' section5heading'>Businesses</h1>
-              <hr id='sec5hr'></hr> 
+            {/* <h1 className=' section5heading'>Businesses</h1>
+              <hr id='sec5hr'></hr> <br></br>
           <p className='section5intro'>OnGrid provides comprehensive background verification services that can be
               customized to any requirement for any industry. Every business has a different purpose for verification and compliance, and hence we offer tailor-made solutions for your
-              unique background check needs.</p><br />
+              unique background check needs.</p><br /> */}
           <div className='section5body'>
         
              {

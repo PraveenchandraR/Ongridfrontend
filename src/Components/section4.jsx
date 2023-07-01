@@ -24,7 +24,7 @@ const Section4 = () => {
    
     
   return (
-      <div>
+      <div id='offerings'>
            <section className='section4'  >
           <div className='section4head'>
             <h1 className=' sectionheading'>Our Offerings</h1>

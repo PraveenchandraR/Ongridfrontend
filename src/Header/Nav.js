@@ -31,37 +31,57 @@
 
 // export default Nav;
 
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { HashLink as Link } from "react-router-hash-link";
-import { useAuth } from "../HOOK/Auth";
+import { useEffect } from "react";
+import Collapsible from "react-collapsible";
+import '../Style/nav.css';
+// import { useAuth } from "../HOOK/Auth";
 
 const Header = () => {
-
-  // const ref= useRef(null);
-
-  // const handelClick = (e)=>{
-  //   e.preventDefault();
-  //   ref.current?.scrollIntoView({behaviour: 'smooth'})
-  // }
-  const [auth, setAuth] = useAuth();
-  const handleLogout = () => {
-    setAuth({
-      ...auth,
-      user: null,
-      token: " ",
+  const [details, setDetails] = useState([]);
+  const [profile, SetProfile] = useState(false);
+    const fetchfunc = () => {
+        fetch("http://localhost:8080/userdetails", {
+    method: "POST",
+    body:  JSON.stringify({ token: window.localStorage.getItem("token") }),
+        
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    }
       
-    });
-    console.log(auth);
-    localStorage.removeItem("auth");
-    // toast.success("Logout Successfully");
-  };
+  })
+    .then(res =>  res.json())
+    .then((e) =>
+      setDetails(e.data));
   
+  }
+  
+    useEffect(
+        () => {
+            fetchfunc();
+        },[]
+  )
+   const afterlogged = window.localStorage.getItem("loggedIn");
+ 
+     
+ const handleProfilePop=()=>{
+     SetProfile(!profile);
+    }
 
+  const logout=()=>{
+        window.localStorage.clear();
+      window.location.href = "./"
+      alert("successfully logged-out");
+    }
+
+  
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div className="container">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark" id="navhead">
+        <div className="container" id="container">
           <NavLink className="navbar-brand" to="/">
             <img
               src="https://ongrid.in/images/home/logo/logo_ongrid-darkbakground.png"
@@ -114,59 +134,35 @@ const Header = () => {
               </li>
             </ul>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/bookdemo">
+              {afterlogged ?  <li className="nav-item">
+           
+                <NavLink className="nav-link" to='/bookdemo'>
                   Book a Demo
                 </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/signup">
-                  SignUp
-                </NavLink>
-              </li>
-              <li className="nav-item">
+              </li>:"" }
+            
+         
+              <br />
+              {afterlogged ? '':
+              <li  > <NavLink className="nav-link" to='/login'>Sign-in</NavLink></li>
+              }
+                 {afterlogged ? <b className="proname nav-link  " id="proname">Hi {details.name} </b>: ''}
+              {afterlogged ?  <li className="nav-link"> <div id="Collapsiblepro"> <Collapsible trigger={<button className="profileicon" onClick={handleProfilePop}>
+                <i class="fa-regular fa-user"></i></button>}>
+                {
+                profile && (
+                
+          <button onClick={logout}>Logout</button>
+      )
+           }
+        </Collapsible></div></li>: ''}
+            
+                     
 
-             {!auth.user ? (<div>
-            
-              <Link to="/login" className="nav-profile">
-                {/* <div className="profileLogo">
-                  <img src='' alt="User Profile" />
-                </div> */}
-                <div className="nav-link">Login</div>
-              </Link>
-            
-          </div>) : (
-            <>
-              <ul>
-                <div class="dropdown">
-                  <button class="dropbtn">
-                    <Link className="nav-link" to={'/'}>{auth?.user?.name}</Link>
-                  </button>
-                  <ul class="dropdown-content">
-                    {/* <li><Link className="draplink" to={`/${auth?.userFound?.role === 1 ? 'admin' : 'user'}`}>handleLogout</Link></li> */}
-                    <li><Link
-                      to="/login"
-                      className="nav-link"
-                      onClick={handleLogout}
-                    >
-                    Logout
-                    </Link></li>
-                  </ul>
-                </div>
               </ul>
-            </>
-          )}
-
-                {/* <NavLink className="nav-link" to="/login">
-                  LogIn
-                </NavLink> */}
-              </li>
-              <li>
-                <Link className="nav-link" to={'/userdetails'}>userdetails</Link>
-              </li>
-            </ul>
-          </div>
-        </div>
+           </div>
+   </div>
+          
       </nav>
     </>
   );

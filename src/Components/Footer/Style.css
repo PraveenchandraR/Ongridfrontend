@@ -399,3 +399,14 @@
 .margin-left {
   margin-left: 25px;
 }
+@media only screen and(min-width: 370px) and (max-width: 900px) {
+  .footermain {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column;
+    /* height: 30vh; */
+    justify-content: center;
+  }
+}

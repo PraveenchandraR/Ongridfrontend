@@ -2,7 +2,36 @@ body {
   margin: 0px;
   padding: 0px;
 }
+.thehome {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.Home {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  align-content: center;
+  justify-content: space-between;
+}
+.homebody {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
 
+li .nav-link {
+  color: aliceblue;
+}
 .nav {
   width: 1000px;
   height: 60px;
@@ -16,9 +45,20 @@ body {
   font-style: italic;
   font-weight: 400;
 }
-.logo {
-  width: 100px;
+.profile {
+  color: #34d0d0;
+  font-size: large;
 }
+#Collapsiblepro {
+  background-color: #34d0d0;
+}
+.proname {
+  color: lightgreen;
+}
+.logo {
+  width: 110px;
+}
+
 .link {
   text-decoration: none;
   color: white;
@@ -27,8 +67,30 @@ body {
   background-color: #34d0d0;
 }
 .navbar {
+  color: #fff;
   height: 100px;
+  text-decoration: none;
 }
+.navbar > .container {
+  align-items: flex-start;
+}
+#navhead {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-content: space-around;
+}
+/* li.nav-link {
+  text-decoration: auto;
+}
+.navbar-expand-lg {
+  text-decoration: none;
+  color: #fff;
+}
+.navbar-collapse {
+  text-decoration: none;
+  color: #fff;
+} */
 .navbody {
   border: 1px solid black;
   height: 50px;
@@ -38,6 +100,7 @@ body {
   background-color: rgb(24 39 53);
 }
 .nav2 {
+  color: #fff;
   display: flex;
   width: 400px;
   justify-content: space-around;
@@ -45,6 +108,13 @@ body {
 
 .section1 {
   width: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
   background-size: auto, auto, cover;
   background-position: center;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
@@ -61,15 +131,17 @@ body {
 }
 
 .introtext {
-  position: absolute;
-  top: 52%;
-  text-align: center;
-  width: 100%;
-  min-height: 100px;
-  font-size: 24px;
-  color: #fff;
-  line-height: 28px;
-  margin-top: -175px;
+  display: flex;
+  width: 50%;
+  font-size: larger;
+  color: aliceblue;
+  padding: 20px;
+
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 .start {
   color: rgba(255, 255, 255, 0.87);
@@ -81,26 +153,43 @@ body {
   font-family: Roboto;
 }
 .section2 {
+  position: relative;
   color: #fff;
   font-size: 14px;
-  line-height: 18px;
-  text-align: center;
-  box-sizing: border-box;
+  /* line-height: 18px; */
+  /* text-align: center; */
+  /* box-sizing: border-box; */
   height: 200px;
-  border: 1px solid black;
   background-color: rgb(24 39 53);
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-
   align-content: center;
+  align-items: center;
+}
+.sec2para {
+  width: 50%;
 }
 
 .section3 {
+  width: 1100px;
+  position: relative;
+  flex-direction: column;
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+#sec3head {
+  display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 .boxes1 {
   display: flex;
   flex-direction: row;
@@ -108,13 +197,12 @@ body {
   justify-content: space-between;
 }
 .boxes2 {
-  position: relative;
   margin-top: 1%;
 
   display: grid;
   grid-template-columns: auto auto auto auto;
   column-gap: 10px;
-  row-gap: 20px;
+  row-gap: 10px;
   width: 1100px;
 }
 .box1 {
@@ -130,7 +218,14 @@ body {
   width: 355px;
   height: 200px;
 }
-.sector4 {
+.unqbtn {
+  background-color: #34d0d0;
+  border-radius: 10%;
+}
+.sector4 .box4,
+.box6,
+.box7,
+.box8 {
   /* margin-top: 5%; */
   border: 1px solid black;
   display: flex;
@@ -277,26 +372,30 @@ body {
     animation-duration: 2s;
   }
 }
-.section3 {
-  height: auto;
+#section4 {
+  width: 1100px;
+  display: flex;
+}
+#ouerofferings {
+  width: 100%;
+}
+#offerings {
+  width: 100%;
+  position: relative;
+  display: flex;
 }
 .section4 {
+  width: 100%;
   height: auto;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 .section4box {
-  /* border: 1px solid black; */
   height: 500px;
   position: relative;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  right: 20px;
-  justify-content: space-around;
-  width: 1100px;
+  width: 100%;
 }
 .sectionheading {
   font-family: robot;
@@ -307,8 +406,9 @@ body {
 }
 .sectionintro {
   font-size: medium;
-  width: 970px;
+
   margin-bottom: 30px;
+  font-weight: 400;
 }
 
 #hr {
@@ -320,9 +420,10 @@ body {
   left: 50%;
 }
 .btn {
+  position: relative;
   padding: 0px;
-  height: 300px;
-  width: 300px;
+  height: 90%;
+  width: 33%;
   border: 0;
 }
 .section4head {
@@ -330,31 +431,26 @@ body {
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
+
 .sec4box1,
 .sec4box2,
 .sec4box3 {
-  /* border: 1px solid black; */
-  /* height: 500px;
-  width: 500px; */
   color: white;
 
   border: 1px solid black;
-  height: 300px;
-  width: 360px;
+  height: 100%;
   color: white;
   display: flex;
   align-items: center;
   font-size: xx-large;
 
-  /* font-style: normal; */
   font-family: math;
   z-index: -1;
 }
 
 .sec4box1 {
-  /* width: 330px; */
-  height: 450px;
   background-image: url("https://ongrid.in/images/home/offerings-onGrid.jpg");
 
   background-size: cover;
@@ -363,21 +459,32 @@ body {
   border: 1px solid black;
   color: white;
   position: absolute;
-  width: 1200px;
+
   height: 500px;
   z-index: 2;
   background-image: url("https://ongrid.in/images/home/offerings-onGrid1.jpg");
   background-size: cover;
+  animation-name: offer;
+  animation-duration: 2s;
+}
+@keyframes offer {
+  0% {
+    transform: translateX(-35%) scale(0);
+  }
+  100% {
+    transform: translateX(0%) scale(1);
+    animation-duration: 1s;
+  }
 }
 .sec4box2 {
   /* width: 350px; */
-  height: 450px;
+
   background-image: url("https://ongrid.in/images/home/offerings-gridlines.jpg");
   background-size: cover;
 }
 .sec4box3 {
   /* width: 350px; */
-  height: 450px;
+
   background-image: url("https://ongrid.in/images/home/offerings-eLockr.jpg");
   background-size: cover;
 }
@@ -402,8 +509,14 @@ body {
 .closebtn {
   position: absolute;
   right: 0;
+  background-color: #34d0d0;
+  border-radius: 10px;
+  width: 20px;
   top: 0;
+  animation-name: closer;
+  animation-duration: 2s;
 }
+
 .popuphr {
   height: 5px;
   background-color: #34d0d0;
@@ -444,16 +557,17 @@ body {
   position: relative;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+
   align-items: center;
-  height: 1100px;
 }
 .section5body {
+  position: relative;
   width: 1000px;
-  height: 700px;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
 }
 
 .section5heading {
@@ -495,30 +609,35 @@ body {
   /* opacity: 0.2; */
   /* z-index: -2; */
 }
+.popupcard {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .popups {
-  top: 27%;
-  left: 15%;
-  z-index: 2;
   width: 70%;
   height: 800px;
   border: #34d0d0;
   border: 1px solid;
-  position: absolute;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  animation: slideIn 1s ease-in;
+  animation: slideIn 2s;
   align-items: center;
 }
 
 @keyframes slideIn {
   from {
-    visibility: collapse;
+    /* visibility: collapse; */
+    transform: translateX(-35px) scale(0);
     /* transform: translatez(-100%); */
-    animation-duration: 0.5s;
+    animation-duration: 1s;
     opacity: 0;
   }
   to {
+    transform: translateX(o) scale(1);
     /* transform: translatez(0); */
     animation-duration: 1s;
     opacity: 1;
@@ -576,18 +695,29 @@ body {
   justify-content: center;
   font-size: large;
 }
+.down {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  justify-content: center;
+  height: 5vh;
+}
 .footermain {
+  width: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 300px;
+  height: 250px;
   background-color: #232835;
   color: aliceblue;
 }
 .footer {
   color: aliceblue;
   display: flex;
-  height: 200px;
+  height: 150px;
   /* background-color: rgb(65, 70, 63); */
   justify-content: space-around;
   align-items: center;
@@ -608,9 +738,155 @@ body {
   display: flex;
   flex-direction: column;
 }
+.footerlinks {
+  color: white;
+  text-decoration: none;
+}
 
-@media only screen and (min-width: 400px) and (max-width: 950px) {
-  body {
+/* responsive */
+@media only screen and (min-width: 350px) and (max-width: 900px) {
+  .thehome {
+    position: relative;
+    margin: 0;
+    padding: 0%;
+    display: flex;
+    /* display: block; */
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+  .Home {
+    border: 1px solid;
+    position: relative;
+    /* margin: 10px; */
+    /* height: 720vh; */
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  /* width: 900px; */
+
+  .homebody {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* height: 2000vh; */
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar {
+    width: 100vw;
+  }
+  #navhead {
+    width: 100%;
+    height: 100%;
+  }
+  #container {
+    display: flex;
+    width: 70%;
+
+    /* margin-left: 20%; */
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .container {
+    width: 50%;
+  }
+  .section1 {
+    background-image: url("../images/hero-image2.jpg");
+    background-size: cover;
+    background-position: center;
+    height: -moz-fit-content;
+    height: fit-content;
+    font-size: large;
+
+    position: relative;
+    width: 100%;
+  }
+  .introtext {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .section2 {
+    width: 100%;
+    height: fit-content;
+    font-size: large;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .section3 {
+    position: relative;
+    width: 100%;
+    /* padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto; */
+  }
+  .boxes1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .sector3 {
+    width: 100%;
+  }
+  .boxes2 {
+    display: flex;
+    width: 100%;
+    /* width: 850px; */
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .sector4 {
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  #sec3head {
+    display: flex;
+
+    justify-content: center;
+    align-content: flex-end;
+  }
+  #sec3head p {
+    align-items: center;
+    width: 100vw;
+    display: flex;
+  }
+  #section4 {
+    width: 100%;
+  }
+  .section4 {
+    width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -618,11 +894,64 @@ body {
     align-content: center;
   }
 
-  .navbar {
-    height: 400px;
+  .section4box {
+    display: grid;
+    width: 100%;
+
+    justify-items: center;
   }
-  .section2 {
-    width: auto;
-    height: fit-content;
+  .section4box .btn {
+    width: 100%;
+  }
+  .pop1 {
+    width: 100%;
+    height: 1500px;
+    position: absolute;
+    z-index: 2;
+  }
+
+  .section5 {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    flex-direction: column;
+  }
+  .sec5top {
+    width: 100%;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .section5intro {
+    display: contents;
+  }
+  .section5 .section5body {
+    width: 100%;
+    display: block;
+  }
+  .businessgrid {
+    width: 30%;
+  }
+  .businessimage {
+    background-size: cover;
+  }
+
+  .start {
+    position: absolute;
+  }
+  .footermain {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column;
+    /* height: 30vh; */
+    justify-content: center;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
   }
 }

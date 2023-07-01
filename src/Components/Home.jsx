@@ -10,13 +10,8 @@ import Footer from './Footer';
 import { useState } from 'react';
 
 
-
-
 const Home = () => {
-    // const [popup,setPop]=useState(false)
-    // const handleClickOpen=()=>{
-    //     setPop(!popup)
-    // }
+ 
   
   const Location = useLocation();
   const [display, setDisplay] = useState(false);
@@ -26,30 +21,35 @@ const Home = () => {
     setDisplay(!display);
     setBusinessDisplay(!businesdisplay)
   }
-  
+  const afterlog =window.localStorage.getItem("loggedIn")
 
   return (
-      <div>
-          <div> <Nav /> </div>
-          {/* <br /> */}
+    <>
+      <div className='thehome'>
+    <Nav />
+      <div className='Home'>
+    
       <div className='homebody'>
+
         <div className='section1' >
           
         <div className='introtext'>
         <h1>DIGITAL TRUST PLATFORM</h1>  
-Empowering employers and service providers through comprehensive identity and background
-verifications for ensuring trust and accountability, and for achieving HR/ISO compliance.
+         <p> Empowering employers and service providers through comprehensive identity and background
+         verifications for ensuring trust and accountability, and for achieving HR/ISO compliance.</p>
             <br />
-            <br />
-          
-              <Link    className='start' to={'/signup'}>Get Started</Link>
-           
+                <br />
+                <div>
+                    {afterlog ? "": <Link    className='start' to={'/signup'}>Get Started</Link>}
+                </div>
+        
+            
           </div>      
       </div >
         <hr className='hr'></hr>
        
-      <section className='section2' id='whygrid'>
-          <div>
+      <section className='section2' >
+          <div className='sec2para'>
             Millions of people are a step away from entering the formal digital economy.
               They will need access to formal services such as jobs, education, healthcare, loans, insurance products,
               house/vehicle on rent, etc.
@@ -59,13 +59,14 @@ verifications for ensuring trust and accountability, and for achieving HR/ISO co
     </div>
         </section>
         
-        <section className='section3'  >
-          <div>
-            <h1 className=' sectionheading'>Why OnGrid</h1>
-              <hr id='hr'></hr> <br />
+        <section className='section3' id='whygrid' >
+          <div id='sec3head'>
+            <h1 className=' sectionheading'>Why OnGrid</h1> <br />
+              <hr id='hr'></hr>
             <p className='sectionintro'>OnGrid is the fastest growing ISO-certified digital platform for background verifications and checks, serving over 2000+ clients, and having run over 100 million checks. OnGrid's advanced methodologies and proprietary algorithms across 50+ checks brings what you are really expecting from your BGV partner - high efficacy and accuracy, lesser TAT, lesser cost,
               and hassle-free experience for HR/TA or operations managers running the verification process.</p>
           </div>
+          <br />
         <div className='boxes1'>
             <div className='sector3 box1' >
               <div className="secondaryColour mobile" id="leveragesAadhaarMobile">
@@ -83,9 +84,10 @@ verifications for ensuring trust and accountability, and for achieving HR/ISO co
         -  Reference Checks<br />
         -  Police and Court record verification<br />
         -  Global database checks, credits checks</div>
-            <div className='sector3 box3' >box3</div>
-            </div>
-          {/* <br /> */}
+            <div className='sector3 box3' ></div>
+          </div>
+          
+      
           <div className='boxes2'>
           <div className='sector4 box4' ></div>
           <div className='sector4 box5' ></div>
@@ -112,20 +114,27 @@ verifications for ensuring trust and accountability, and for achieving HR/ISO co
             <div className='sector4 box9' ></div>
             </div>
         </section>
-        <section >
-          <div id='#ourOfferings'>
+        <section id='section4'>
+          <div id='ourOfferings'>
            <Section4 />
           </div>
          
             </section>
         <section className='section5' id='business' >
+          <div className='sec5top'>
+          <h1 className=' section5heading'>Businesses</h1>
+              <hr id='sec5hr'></hr> <br></br>
+          <p className='section5intro'>OnGrid provides comprehensive background verification services that can be
+              customized to any requirement for any industry. Every business has a different purpose for verification and compliance, and hence we offer tailor-made solutions for your
+                  unique background check needs.</p></div>
+              <br />
           {businesdisplay && (
-          <div onClick={handleClick} >
+          <div className='contextdata' onClick={handleClick} >
          <Bussiness />
           </div>
          )}
           {
-            display && (<div>
+            display && (<div className='popupcard'>
                <div className='popups' >
         
               <div className='details' >
@@ -161,17 +170,20 @@ verifications for ensuring trust and accountability, and for achieving HR/ISO co
            }
 
         </section>
-        <br />
-       
-      </div>
-       <button className='start'>
+     
+        </div>
+        <section className='down'>
+         <br />
+        {afterlog ? "":  <button className='start'>
         <Link to={'/signup'}> Get Started</Link>
-      </button>
-   
-      <div>
-        <Footer />
+      </button>}
+       
+      </section>
       </div>
-    </div>
+      
+        <Footer />
+     </div>
+      </>
     
   )
 }

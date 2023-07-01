@@ -1,8 +1,7 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {  Routes, Route } from 'react-router-dom';
 
 // import FaQ from '../Components/FaQ';
-import BookDemo from '../Components/bookDemo';
 import Sign from '../Components/Sign';
 import Home from '../Components/Home';
 // import Uniqueid from '../Components/utility/uniqueid';
@@ -13,24 +12,27 @@ import Contact from '../Components/Footer/Contact';
 import Career from '../Components/Footer/Career';
 import TermsAnd from '../Components/Footer/TermsAnd';
 import Faq from '../Components/FAQs';
-import Userdetails from '../Components/userdetails';
-
+import BookDemo from '../Components/BookDemo';
 
 
 
 
 
 const Routing = () => {
+
+  const afterlogged = window.localStorage.getItem("loggedIn");
+  
+ 
   return (
-    <BrowserRouter>
+ 
       <Routes>
         <Route path='/' element={<Home /> } />
      
         <Route path='/business' element={<Bussiness /> } />
         <Route path='/faq' element={ <Faq />} />
-        <Route path='/bookdemo' element={<BookDemo />} />
-        <Route path='/login' element={<Sign />} />
-        <Route path='/signup' element={<Signup />} />
+      <Route path='/bookdemo' element={<BookDemo />} />
+        <Route path='/login' element={afterlogged ?<BookDemo /> :<Sign />} />
+        <Route path='/signup' element={ <Signup />} />
        
          <Route path='/about' element={<About />} />
         
@@ -38,13 +40,12 @@ const Routing = () => {
         
          <Route path='/career' element={<Career  />} />
         <Route path='/tnc' element={<TermsAnd />} />
-        <Route path='/userdetails' element={<Userdetails /> } />
-        
+     
         
       {/* <Route path='/#business/${id}'/> */}
         
       </Routes>
-    </BrowserRouter>
+ 
   )
 }
 
