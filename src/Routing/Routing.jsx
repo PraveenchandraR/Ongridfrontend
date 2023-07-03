@@ -12,7 +12,7 @@ import Contact from '../Components/Footer/Contact';
 import Career from '../Components/Footer/Career';
 import TermsAnd from '../Components/Footer/TermsAnd';
 import Faq from '../Components/FAQs';
-import BookDemo from '../Components/BookDemo';
+import BookDemo from '../Components/Bookdemo';
 
 
 
