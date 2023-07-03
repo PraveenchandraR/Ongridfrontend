@@ -19,7 +19,7 @@ import BookDemo from '../Components/BookDemo';
 
 
 const Routing = () => {
-
+   
   const afterlogged = window.localStorage.getItem("loggedIn");
   
  
@@ -29,8 +29,9 @@ const Routing = () => {
         <Route path='/' element={<Home /> } />
      
         <Route path='/business' element={<Bussiness /> } />
-        <Route path='/faq' element={ <Faq />} />
-      <Route path='/bookdemo' element={afterlogged ?<BookDemo /> :<Sign />} />
+      <Route path='/faq' element={<Faq />} />
+      <Route path='/bookdemo' element={ <BookDemo />} />
+      {/* <Route path='/bookdemo' element={afterlogged ?<BookDemo />:<Sign /> } /> */}
         <Route path='/login' element={afterlogged ?<BookDemo />:<Sign />} />
         <Route path='/signup' element={ <Signup />} />
        

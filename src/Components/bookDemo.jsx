@@ -31,7 +31,7 @@ const BookDemo =()=>
                           .then(data => {
                             if (data.status === "ok")
                             {
-                          
+                             
                               alert("Demo Booked successfully");
                               window.localStorage.setItem("demobooked", true);
                               navigate('/')
@@ -44,7 +44,8 @@ const BookDemo =()=>
                             }
                           })
           }  
-  const demobooked=window.localStorage.getItem('demobooked')
+  const demobooked = window.localStorage.getItem('demobooked');
+
   // const handleSubmit = async(event)=>{
   //   event.preventDefault();
   //   try {
@@ -71,9 +72,9 @@ const BookDemo =()=>
   return (
     <div className='DemoPage'>
 
-         
-     
+    
       <div className='demobody'>
+        
         <div className='logo2'><Link to={'/'}> <img className='demologo' src='https://ongrid.in/images/home/logo/logo_white.png' alt='logo' /></Link>
        
         </div >
@@ -106,26 +107,26 @@ const BookDemo =()=>
             <h1>Have a great day!</h1>
           </div> :
             <div className='demoright'>
-              <div>
-                <form className='formdatas' onSubmit={BookingDemo} >
+              <div className='formdatas'  >
+                {/* <form className='formdatas' onSubmit={BookingDemo} > */}
                 
                
                   
-                  <label htmlFor='' data-required="true" >
+                  <label htmlFor='name' data-required="true" >
                     Name</label><br ></br>
-                  <input className='forminput' id="" type="text" required autoComplete='name'
+                  <input className='forminput' type="text" required id='name'
                     placeholder="Please provide your name" onChange={(e) => setName(e.target.value)} />
                   <br />
-                  <label htmlFor='' >Email id</label><br />
-                  <input className='forminput' type='email' placeholder='Provide your email id' name='' id='email' autoComplete='email' value={email} required onChange={(e) => setEmail(e.target.value)} /><br />
+                  <label htmlFor='email' >Email id</label><br />
+                  <input className='forminput' type='email' placeholder='Provide your email id' id='email'  value={email} required onChange={(e) => setEmail(e.target.value)} /><br />
            
-                  <label htmlFor=''>Phone No</label><br />
-                  <input className='forminput' type='tel' placeholder='Provide your Phone number'name='phone' id='' autoComplete='phone' value={phone} required onChange={(e) => setPhone(e.target.value)} /><br />
+                  <label htmlFor='phone'>Phone No</label><br />
+                  <input className='forminput' type='tel' placeholder='Provide your Phone number' id='phone'  value={phone} required onChange={(e) => setPhone(e.target.value)} /><br />
                 
-                  <label htmlFor=''>Organisation Name</label><br />
-                  <input className='forminput' type='text' placeholder='Provide Organisation'name='organisation' id='' value={organisation} required onChange={(e) => setOrganisation(e.target.value)} /><br />
-                  <label htmlFor=''  >How did you learn about OnGrid</label><br />
-                  <select className='forminput' value={known} name='known' id='' onChange={(e) => setKnown(e.target.value)}>
+                  <label htmlFor='organisation'>Organisation Name</label><br />
+                  <input className='forminput' type='text' placeholder='Provide Organisation'id='organisation' value={organisation} required onChange={(e) => setOrganisation(e.target.value)} /><br />
+                  <label htmlFor='known'  >How did you learn about OnGrid</label><br />
+                    <select className='forminput' value={known} id='known'    onChange={(e) => setKnown(e.target.value)}>
                 
                     <option disabled >Please select</option>
                     <option >Google</option>
@@ -138,12 +139,12 @@ const BookDemo =()=>
                     <option  >I have used OnGrid before</option>
                   </select>
                     <br />
-                    <br />
                   <div>
+                    <br /> 
                     <button className='demobtn' type='submit' onClick={BookingDemo}>Submit</button>
                   </div>
                
-                </form>
+                {/* </form> */}
               </div>
             </div>}
 
@@ -151,7 +152,7 @@ const BookDemo =()=>
        
         </div>
         <br />
-      </div>
+        </div>
       <div className='demodown'>
         <h4 >Incredible companies working with OnGrid</h4>
         <div className='demoimages'>
